@@ -31,15 +31,14 @@ function screenDuckScene() {
   return `
     <div class="scene">
       <div class="sky">
-        <div class="neighborhood" aria-hidden="true">
-          <div class="clouds"></div>
-          <div class="houses"></div>
-          <div class="trees"></div>
-        </div>
+        <div class="bg-layer clouds" aria-hidden="true"></div>
+        <div class="bg-layer houses-far" aria-hidden="true"></div>
+        <div class="bg-layer houses-near" aria-hidden="true"></div>
+        <div class="bg-layer trees" aria-hidden="true"></div>
 
         <div class="overlay">
           <div class="card" id="card">
-            <p class="question">Will you be my Valentine? 💘</p>
+            <p class="question">Will you be the Chick-fil-a sauce to my Chick-fil-a sandwich? (aka valentines)</p>
             <p class="subtext">(choose wisely)</p>
 
             <div class="btn-row" id="btnRow">
@@ -53,12 +52,21 @@ function screenDuckScene() {
       </div>
 
       <div class="street">
-        <div class="footsteps" aria-hidden="true"></div>
-        <div class="duck" aria-hidden="true">🦆</div>
+        <div class="duck-wrap" aria-hidden="true">
+          <div class="duck-tail"></div>
+          <div class="duck-body"></div>
+          <div class="duck-head">
+            <div class="duck-eye"></div>
+            <div class="duck-beak"></div>
+          </div>
+          <div class="leg left"></div>
+          <div class="leg right"></div>
+        </div>
       </div>
     </div>
   `;
 }
+
 
 function screenYesHold() {
   return `
@@ -69,66 +77,56 @@ function screenYesHold() {
 }
 
 function screenFinalFavorites() {
-  // A cute collage of favorite-things (icons + labels)
-  const heartsLine = "💗 💖 💘 💝 💞 💓 ❤️‍🔥 💟 💕 ".repeat(40);
-
   return `
     <div class="final">
-      <div class="hearts-bg">${heartsLine}</div>
+      <div class="hearts-fall" aria-hidden="true"></div>
 
-      <div class="final-wrap">
-        <div class="final-title">
-          <h1>OKAYYYYY 👀💘</h1>
-          <p>A little collection of your favorites (as a preview of my effort 😤)</p>
-        </div>
+      <div class="collage">
+        <div class="collage-board">
+          <div class="sparkle" style="left: 6%; top: 10%;">💘</div>
+          <div class="sparkle" style="left: 90%; top: 18%; animation-delay: 0.4s;">✨</div>
+          <div class="sparkle" style="left: 10%; top: 78%; animation-delay: 0.8s;">💖</div>
 
-        <div class="grid">
-          <div class="tile">
-            <div class="big-emoji">🍔🔥</div>
-            <h3>Spicy chicken sandwich + sauce</h3>
-            <p>With that legendary “dip it in sauce” vibe.</p>
+          <div class="note" style="left: 6%; top: 6%; --w: 280px; --r: -2deg;">
+            <h3>ok soooo…</h3>
+            <p>if you said yes… you’re kinda stuck with me now 😭💗</p>
           </div>
 
-          <div class="tile">
-            <div class="big-emoji">🍫🍰</div>
-            <h3>Chocolate mousse cake</h3>
-            <p>Soft. Chocolatey. Zero regrets.</p>
+          <div class="polaroid" style="left: 10%; top: 32%; --w: 260px; --r: -6deg;">
+            <img src="images/chickfila.jpg" alt="Chick-fil-A sandwich">
+            <div class="cap">:contentReference[oaicite:0]{index=0} vibes 🍔🔥</div>
           </div>
 
-          <div class="tile">
-            <div class="big-emoji">🍜🍜🍜</div>
-            <h3>Noodles (a lot)</h3>
-            <p>Enough noodles to end all sadness.</p>
+          <div class="polaroid" style="left: 38%; top: 16%; --w: 250px; --r: 4deg;">
+            <img src="images/cake.jpg" alt="Chocolate mousse cake">
+            <div class="cap">chocolate mousse cake 🍫🍰</div>
           </div>
 
-          <div class="tile">
-            <div class="big-emoji">☁️🍡</div>
-            <h3>Marshmallows</h3>
-            <p>Sweet, fluffy, and elite.</p>
+          <div class="polaroid" style="left: 62%; top: 34%; --w: 260px; --r: 7deg;">
+            <img src="images/noodles.jpg" alt="Noodles">
+            <div class="cap">NOODLES 🍜🍜🍜</div>
           </div>
 
-          <div class="tile">
-            <div class="big-emoji">🎤✨</div>
-            <h3>Ariana Grande</h3>
-            <p>Pop star energy: activated.</p>
+          <div class="polaroid" style="left: 44%; top: 56%; --w: 230px; --r: -3deg;">
+            <img src="images/marshmallows.jpg" alt="Marshmallows">
+            <div class="cap">marshmallows ☁️🍡</div>
           </div>
 
-          <div class="tile">
-            <div class="big-emoji">🎧🌙</div>
-            <h3>Mac Miller</h3>
-            <p>Chill playlists. Late-night vibes.</p>
+          <div class="note" style="left: 70%; top: 10%; --w: 260px; --r: 2deg;">
+            <h3>playlist energy</h3>
+            <p>:contentReference[oaicite:1]{index=1} + :contentReference[oaicite:2]{index=2} = elite taste 🎧</p>
           </div>
 
-          <div class="tile" style="grid-column: span 12;">
-            <div class="big-emoji">💘💘💘</div>
-            <h3>And… hearts. Everywhere.</h3>
-            <p>If you scroll and don’t feel loved, it’s a bug.</p>
+          <div class="note" style="left: 72%; top: 70%; --w: 250px; --r: -2deg;">
+            <h3>final verdict</h3>
+            <p>you’re my favorite person to annoy 💞</p>
           </div>
         </div>
       </div>
     </div>
   `;
 }
+
 
 /* ---- Button behavior (No runs around but still catchable) ---- */
 
