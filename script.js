@@ -101,7 +101,7 @@ function screenDuckScene() {
 function screenYesHold() {
   return `
     <div class="center">
-      <div class="intro-text">Do I even know you like that</div>
+      <div class="intro-text">Do I even know you like that??</div>
     </div>
   `;
 }
@@ -119,7 +119,7 @@ function screenFinalFavorites() {
 
           <div class="note" style="left: 6%; top: 6%; --w: 280px; --r: -2deg;">
             <h3>ok soooo…</h3>
-            <p>you said yes?? oh.. well.. counting the days until you're back 💗</p>
+            <p>you said yes?? oh.. well.. counting the days until you're back and you will recieve all of this 💗</p>
           </div>
 
           <div class="polaroid" style="left: 10%; top: 32%; --w: 260px; --r: -6deg;">
