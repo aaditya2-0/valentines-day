@@ -145,6 +145,26 @@ function screenFinalFavorites() {
             <img src="images/gilmore.jpg" alt="Gilmore">
             <div class="cap">gilmore vibes ☕️📚</div>
           </div>
+
+          <!-- Fish burrito (bigger) -->
+          <div class="polaroid" style="left: 6%; top: 58%; --w: 300px; --r: 4deg;">
+            <img src="images/fish_burrito.jpg" alt="Fish burrito">
+            <div class="cap">elite fish burrito 🌯🐟</div>
+          </div>
+          
+          <!-- OC poster (BIG) -->
+          <div class="polaroid" style="left: 30%; top: 58%; --w: 380px; --r: -3deg;">
+            <img src="images/oc.jpg" alt="OC poster">
+            <div class="cap">poster energy 🎬</div>
+          </div>
+          
+          <!-- Modern poster (BIG) -->
+          <div class="polaroid" style="left: 68%; top: 42%; --w: 380px; --r: 5deg;">
+            <img src="images/modern1.jpg" alt="Modern poster">
+            <div class="cap">modern vibes 🖼️</div>
+          </div>
+
+
           
           <div class="note" style="left: 72%; top: 70%; --w: 250px; --r: -2deg;">
             <h3>final verdict</h3>
