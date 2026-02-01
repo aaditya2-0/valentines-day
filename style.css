@@ -484,6 +484,41 @@ button:active { transform: scale(0.98); }
   border-radius: 12px;
 }
 
+/* Mobile-first tweaks */
+@media (max-width: 520px) {
+  .overlay { padding: 14px; }
+
+  .card {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .question {
+    font-size: 22px;
+    line-height: 1.15;
+  }
+
+  .subtext {
+    font-size: 13px;
+  }
+
+  .btn-row {
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0 0;
+  }
+
+  .btn-row button {
+    width: 100%;           /* stack buttons */
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .street { min-height: 170px; }
+}
+
+
 
 
 .sparkle {
